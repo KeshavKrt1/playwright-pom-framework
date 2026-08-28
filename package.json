@@ -1,0 +1,41 @@
+{
+  "name": "playwright-pom-framework",
+  "version": "1.0.0",
+  "description": "Modular, scalable Playwright + TypeScript page object model framework with data-driven testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "page-object-model",
+    "typescript",
+    "automation",
+    "data-driven"
+  ],
+  "author": "QA Automation",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "excel4node": "^1.8.2",
+    "fast-csv": "^4.3.6"
+  }
+}
