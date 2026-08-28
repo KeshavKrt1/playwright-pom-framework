@@ -1,0 +1,110 @@
+[
+  {
+    "scenarioId": "login-valid-credentials",
+    "testName": "Valid Login Credentials",
+    "inputs": {
+      "email": "valid.user@example.com",
+      "password": "ValidPassword123!",
+      "rememberMe": false
+    },
+    "expectedOutputs": {
+      "url": "http://localhost:3000/dashboard",
+      "visible": true
+    },
+    "metadata": {
+      "priority": "high",
+      "createdDate": "2024-01-15",
+      "author": "qa-team"
+    }
+  },
+  {
+    "scenarioId": "login-invalid-email",
+    "testName": "Login with Invalid Email",
+    "inputs": {
+      "email": "invalid-email",
+      "password": "ValidPassword123!",
+      "rememberMe": false
+    },
+    "expectedOutputs": {
+      "message": "Invalid email format",
+      "visible": true
+    },
+    "metadata": {
+      "priority": "high",
+      "createdDate": "2024-01-15",
+      "author": "qa-team"
+    }
+  },
+  {
+    "scenarioId": "login-invalid-password",
+    "testName": "Login with Invalid Password",
+    "inputs": {
+      "email": "valid.user@example.com",
+      "password": "WrongPassword",
+      "rememberMe": false
+    },
+    "expectedOutputs": {
+      "message": "Invalid credentials",
+      "visible": true
+    },
+    "metadata": {
+      "priority": "high",
+      "createdDate": "2024-01-15",
+      "author": "qa-team"
+    }
+  },
+  {
+    "scenarioId": "login-empty-credentials",
+    "testName": "Login with Empty Credentials",
+    "inputs": {
+      "email": "",
+      "password": "",
+      "rememberMe": false
+    },
+    "expectedOutputs": {
+      "message": "Email and password are required",
+      "visible": true
+    },
+    "metadata": {
+      "priority": "high",
+      "createdDate": "2024-01-15",
+      "author": "qa-team"
+    }
+  },
+  {
+    "scenarioId": "login-with-remember-me",
+    "testName": "Login with Remember Me Enabled",
+    "inputs": {
+      "email": "valid.user@example.com",
+      "password": "ValidPassword123!",
+      "rememberMe": true
+    },
+    "expectedOutputs": {
+      "url": "http://localhost:3000/dashboard",
+      "visible": true
+    },
+    "metadata": {
+      "priority": "medium",
+      "createdDate": "2024-01-15",
+      "author": "qa-team"
+    }
+  },
+  {
+    "scenarioId": "login-special-characters",
+    "testName": "Login with Special Characters",
+    "inputs": {
+      "email": "user+special@example.com",
+      "password": "P@$$w0rd!#%&*",
+      "rememberMe": false
+    },
+    "expectedOutputs": {
+      "url": "http://localhost:3000/dashboard",
+      "visible": true
+    },
+    "metadata": {
+      "priority": "medium",
+      "createdDate": "2024-01-15",
+      "author": "qa-team"
+    }
+  }
+]
